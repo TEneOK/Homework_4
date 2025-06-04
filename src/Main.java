@@ -52,16 +52,19 @@ public class Main {
         int attraction = 9;
         int forbidden = 5;
         int accompaniment = 14;
+        boolean parents = true;
         if (attraction < forbidden) {
             System.out.println("Если возраст ребенка равен " + attraction + ", то ему нельзя кататься на аттракционе");
         }
 
-        if (attraction > forbidden && attraction < accompaniment) {
-            System.out.println("Если возраст ребенка равен " + attraction + ", то ему можно кататься на аттракционе " +
-                    "в сопровождении взрослого");
+        if (attraction > forbidden && attraction < accompaniment && parents){
+            System.out.println("Если возраст ребенка равен " + attraction + " и с ним взрослый, то ему можно кататься на " +
+                    "аттракционе");
         } else {
-            System.out.println("Если возраст ребенка равен " + attraction + ", то ему можно кататься без сопровождения" +
-                    "взрослого");
+            System.out.println("Без сопровождения взрослого кататься нельзя");
+        } if (attraction>accompaniment) {
+            System.out.println("Если возраст ребенка равен " + attraction + ", то ему можно кататься на " +
+                    "аттракционе без сопровождения");
         }
         System.out.println("~~~~~Task 6~~~~~");
         int capacityOneTrain = 102;
